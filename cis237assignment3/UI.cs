@@ -40,30 +40,95 @@ namespace cis237assignment3
             // I would send them to create a Utility droid that they deserve
             if( input = "1")
                 {
-                    int NumLang;
+                    int Langs;
                     Console.WriteLine("OK! for your Protocol Droid there are some specific things that we need to add");
                     Console.WriteLine("\n We need to add the Number of languages that it could speak");
                     while(Console.ReadLine() ==  int)
                         {
                             Console.ReadLine = NumLang;
+                            // Add this new information to the toAdd Droid constructor
+                            toAdd += toAdd.NumLang(Langs);
                         }
                 }
             else
                 {
+                    Bool choice1;
+                    Bool choice2;
+                    Bool choice3;
                     Console.WriteLine("Here in Utility we have two choices"+
                     "\n 1. for Astromech"+
                     "\n 2. for Janitor");
                     
                     input = Console.ReadLine();
                     
-                    Console.WriteLine("But all Utility Droids");
+                    Console.WriteLine("But first all Utility Droids may have a tool box."+
+                    "  Would you like your droid to have one?"+
+                    "Enter Y for yes\n Enter N for no");
+                    string readIn;
+                    readIn = Console.ReadLine();
+                    if( readIn == "y" || readIn =="Y")
+                        {
+                            choice1 = true;   
+                        }
+                    else
+                        choice1 = false;
+                    
+                    Console.WriteLine("Some droide may have a Computer Connection"+
+                    "  Would you like your droid to have one?"+
+                    "Enter Y for yes\n Enter N for no");
+                    readIn = Console.ReadLine();
+                    if( readIn == "y" || readIn =="Y")
+                        {
+                            choice2 = true;   
+                        }
+                    else
+                        choice2 = false;
+
+                    Console.WriteLine("Finally please choose weaterh or not this droid will have an Arm"+
+                    "  Would you like your droid to have one?"+
+                    "Enter Y for yes\n Enter N for no");
+                    readIn = Console.ReadLine();
+                    if( readIn == "y" || readIn =="Y")
+                        {
+                            choice3 = true;   
+                        }
+                    else
+                        choice3 = false;
+                    
+                    // append the toAdd Droid with these Features
+                    toAdd.Toolbox = choice1;
+                    toAdd.Compconnect = choice2;
+                    toAdd.arm = choice3;
+
                     if(input = "1")
                     {
                         Console.WriteLine("The Astromech will need some extra things!"+
-                        "\n ")
-                    }
+                        "\n Some may have Fire Extinguishers"+
+                        "  Would you like your droid to have one?"+
+                         "Enter Y for yes\n Enter N for no");
+                           readIn = Console.ReadLine();
+                              if( readIn == "y" || readIn =="Y")
+                                  {
+                                     choice1 = true;   
+                                   }
+                                else
+                               choice1 = false;
+                        // append this decision to the toAdd Droid
+                        // I feel that we can reuse choice 1 because the results of that
+                        // have already been added to the droid, and the new reflection of choice will matter now
+                        toAdd.FireExting = choice1;
+                        
+                        Console.WriteLine("Aditionally it may have other ships to help"+
+                        "  Would you like your droid to have some?"+
+                        "Enter a number of how many you would like to add below:");
+                         readIn = Console.ToInt32(Console.ReadLine());
+                         toAdd.numShips = readIn;
                 }
         }
+        
+        else
+            //Print Droid
+            // Prolly gonnna have another clas do this one
 
         
     }
