@@ -8,6 +8,7 @@ namespace cis237assignment3
 {
     class UI
     {
+        public void User(){
         string input;
         Console.WriteLine("Welcome to the Droid Factory!");
 
@@ -102,6 +103,7 @@ namespace cis237assignment3
 
                     if(input = "1")
                     {
+
                         Console.WriteLine("The Astromech will need some extra things!"+
                         "\n Some may have Fire Extinguishers"+
                         "  Would you like your droid to have one?"+
@@ -133,3 +135,4 @@ namespace cis237assignment3
         
     }
 }
+    }
