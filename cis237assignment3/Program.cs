@@ -10,6 +10,10 @@ namespace cis237assignment3
     {
         static void Main(string[] args)
         {
+            // Create an array that would be the 100 long that we would fill in later
+            Array droid = new Array[100];
+
+            Console.WriteLine("well");
         }
     }
 }
