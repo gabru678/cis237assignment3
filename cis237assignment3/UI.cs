@@ -16,7 +16,7 @@ namespace cis237assignment3
         "\n Please enter a 1 if you would like to create a new droid"+
         "\n or Please enter a 2 if you would like to print out the current droids");
 
-        while(Console.ReadLine != "1" || Console.ReadLine != "2")
+        while(Console.ReadLine() != "1" || Console.ReadLine() != "2")
     {
         Console.WriteLine("Sorry that was not a correct input\n Please enter"+
         "1 to add a new droid"+
@@ -25,12 +25,12 @@ namespace cis237assignment3
 
     input = Console.ReadLine();
 
-    if (input = "1")
+    if (input == "1")
         {
             Console.WriteLine("Thanks for adding a new droid! \n "+
             "enter the type of Droid you would like to make");
             
-            Droid toAdd = New Droid;
+            IDroid toAdd = new IDroid();
             
             Console.WriteLine("Enter a number for your selection:"+
             "\n 1.For a Protocol Droid"+
@@ -39,7 +39,7 @@ namespace cis237assignment3
             //Ensure that the user enteres either a 1 or 2 here
             // or hell I could just ensure that they add a 1 and for anything else
             // I would send them to create a Utility droid that they deserve
-            if( input = "1")
+            if( input == "1")
                 {
                     int Langs;
                     Console.WriteLine("OK! for your Protocol Droid there are some specific things that we need to add");
@@ -53,9 +53,9 @@ namespace cis237assignment3
                 }
             else
                 {
-                    Bool choice1;
-                    Bool choice2;
-                    Bool choice3;
+                    bool choice1;
+                    bool choice2;
+                    bool choice3;
                     Console.WriteLine("Here in Utility we have two choices"+
                     "\n 1. for Astromech"+
                     "\n 2. for Janitor");
@@ -101,7 +101,7 @@ namespace cis237assignment3
                     toAdd.Compconnect = choice2;
                     toAdd.arm = choice3;
 
-                    if(input = "1")
+                    if(input == "1")
                     {
 
                         Console.WriteLine("The Astromech will need some extra things!"+
@@ -123,16 +123,18 @@ namespace cis237assignment3
                         Console.WriteLine("Aditionally it may have other ships to help"+
                         "  Would you like your droid to have some?"+
                         "Enter a number of how many you would like to add below:");
-                         readIn = Console.ToInt32(Console.ReadLine());
+                         readIn = Convert.ToInt32(Console.ReadLine());
                          toAdd.numShips = readIn;
                 }
         }
+    }
+
         
-        else
+        else{}
             //Print Droid
             // Prolly gonnna have another clas do this one
 
         
     }
 }
-    }
+}
