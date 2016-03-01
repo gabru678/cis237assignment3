@@ -30,7 +30,9 @@ namespace cis237assignment3
             Console.WriteLine("Thanks for adding a new droid! \n "+
             "enter the type of Droid you would like to make");
             
-            IDroid toAdd = new IDroid();
+        // Use method overloading
+        // Create a droid of the type they want, then just send it to the AddNewDroid method
+        // Then based on the parameters it would create a new droid of that type
             
             Console.WriteLine("Enter a number for your selection:"+
             "\n 1.For a Protocol Droid"+

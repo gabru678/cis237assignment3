@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace cis237assignment3
 {
-    class Program
+    class DroidCollection
     {
-        static void Main(string[] args)
-        {
-            
-            Console.WriteLine("wellp");
-        }
+        // Create an array that would be the 100 long that we would fill in later
+        Array droid = new Array[100];
     }
 }
